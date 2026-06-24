@@ -8,6 +8,7 @@ import { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
 import ShareButton from "@/components/ShareButton";
 import CopyButton from "@/components/CopyButton";
+import ReminderToggle from "@/components/ReminderToggle";
 
 export default function HomeScreen() {
   const [meals, setMeals] = useState<Meal[]>([]);
@@ -33,6 +34,7 @@ export default function HomeScreen() {
       <HomeHeader />
       <MacroGrid meals={meals} />
       <CopyButton meals={meals} />
+      <ReminderToggle />
       <RecentMeals meals={meals} onDelete={loadMeals} />
     </ScrollView>
   );
